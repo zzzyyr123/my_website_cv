@@ -1,727 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yiran Zhao, Ph.D. - Postdoctoral Candidate</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        
-        /* 修改后的页眉样式 */
-        header {
-            background: linear-gradient(135deg, #003366 0%, #004488 100%);
-            color: white;
-            padding: 2rem 1rem 1.5rem;
-            text-align: center;
-            position: relative;
-        }
-        
-        .header-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        header h1 {
-            margin: 0 0 0.5rem 0;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-        
-        header .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        /* 页眉联系信息样式 */
-        .header-contacts {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-            text-decoration: none;
-        }
-        
-        .contact-icon {
-            font-size: 1.2rem;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-        
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-        }
-        
-        /* 内容区域样式 */
-        section {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 1.5rem 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-        
-        h2 {
-            color: #003366;
-            border-bottom: 2px solid #003366;
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-        }
-        
-        ul {
-            padding-left: 1.2rem;
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight {
-            background-color: #e6f7ff;
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            display: inline-block;
-            font-weight: 500;
-        }
-        
-        /* 修改后的页脚样式 */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(135deg, #002244 0%, #003366 100%);
-            color: white;
-            margin-top: 3rem;
-        }
-        
-        .footer-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .welcome-message {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .welcome-message .highlight-text {
-            color: #4db8ff;
-            font-weight: 700;
-        }
-        
-        .footer-contacts {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .footer-contact-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-            color: white;
-            text-decoration: none;
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-        
-        .footer-social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin: 1.5rem 0;
-        }
-        
-        .footer-social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
-        
-        .footer-social-link:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-3px) scale(1.1);
-        }
-        
-        .copyright {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
-        
-        .update-info {
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        /* 示意图样式 */
-        .figure-container {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-            border-left: 4px solid #003366;
-        }
-        
-        .research-figure {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 1rem auto;
-            border: 1px solid #ddd;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border-radius: 6px;
-        }
-        .research-figure2 {
-            max-width: 90%;
-            height: auto;
-            display: block;
-            margin: 1rem auto;
-            border: 1px solid #ddd;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border-radius: 6px;
-        }
-        .figure-caption {
-            color: #555;
-            font-size: 0.9rem;
-            text-align: center;
-            font-style: italic;
-            margin-top: 0.5rem;
-            line-height: 1.4;
-        }
-        
-        .figure-title {
-            text-align: center;
-            color: #003366;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        /* 修改后的交互式时间线样式 - 6个panel */
-        .research-timeline {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.2rem;
-            margin: 1.5rem 0;
-        }
-        
-        .timeline-step {
-            background: white;
-            padding: 1.2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-top: 3px solid;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        /* 为每个panel设置不同颜色 */
-        .timeline-step:nth-child(1) { border-color: #0066cc; }
-        .timeline-step:nth-child(2) { border-color: #009933; }
-        .timeline-step:nth-child(3) { border-color: #cc6600; }
-        .timeline-step:nth-child(4) { border-color: #9933cc; }
-        .timeline-step:nth-child(5) { border-color: #cc3300; }
-        .timeline-step:nth-child(6) { border-color: #3399cc; }
-        
-        .timeline-step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-        }
-        
-        .step-number {
-            display: inline-block;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
-            font-weight: bold;
-            margin-bottom: 0.8rem;
-            font-size: 0.9rem;
-        }
-        
-        /* 为每个panel设置不同背景色 */
-        .timeline-step:nth-child(1) .step-number { background: #0066cc; }
-        .timeline-step:nth-child(2) .step-number { background: #009933; }
-        .timeline-step:nth-child(3) .step-number { background: #cc6600; }
-        .timeline-step:nth-child(4) .step-number { background: #9933cc; }
-        .timeline-step:nth-child(5) .step-number { background: #cc3300; }
-        .timeline-step:nth-child(6) .step-number { background: #3399cc; }
-        
-        .timeline-step h3 {
-            color: #003366;
-            margin: 0.5rem 0 0.8rem 0;
-            font-size: 1rem;
-            font-weight: 600;
-            min-height: 2.5rem;
-        }
-        
-        .timeline-step ul {
-            padding-left: 1rem;
-            margin: 0.5rem 0 0 0;
-            flex-grow: 1;
-        }
-        
-        .timeline-step li {
-            font-size: 0.85rem;
-            margin-bottom: 0.3rem;
-            color: #555;
-            line-height: 1.4;
-        }
-        
-        /* 连接线样式（可选） */
-        .timeline-connectors {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0.5rem 0;
-            padding: 0 0.5rem;
-        }
-        
-        .connector-line {
-            flex-grow: 1;
-            height: 2px;
-            background: linear-gradient(to right, #0066cc, #009933, #cc6600, #9933cc, #cc3300, #3399cc);
-            margin: 0 0.2rem;
-        }
-        
-        .connector-arrow {
-            color: #0066cc;
-            font-size: 1.2rem;
-        }
-        
-        /* 响应式调整 */
-        @media (max-width: 1024px) {
-            .research-timeline {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .research-timeline {
-                grid-template-columns: 1fr;
-            }
-            
-            section {
-                padding: 1rem;
-                margin: 1rem auto;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .header-contacts,
-            .footer-contacts {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-            
-            .contact-item,
-            .footer-contact-item {
-                justify-content: center;
-            }
-            
-            .welcome-message {
-                font-size: 1.1rem;
-            }
-            
-            .footer-social-links {
-                gap: 0.8rem;
-            }
-            
-            .timeline-connectors {
-                display: none; /* 手机端隐藏连接线 */
-            }
-        }
-    </style>
-    <!-- 引入Font Awesome图标 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yiran Zhao, Ph.D. — Postdoctoral Researcher at Johns Hopkins University. Research in exposomics, multi-omics integration, human phenomics, and chronic disease.">
+  <meta name="author" content="Yiran Zhao">
+  <title>Yiran Zhao, Ph.D. | Johns Hopkins University</title>
+  <style>
+    :root {
+      --navy: #092f52;
+      --blue: #145b91;
+      --sky: #dcecf7;
+      --ink: #243447;
+      --muted: #5d6b78;
+      --paper: #ffffff;
+      --background: #f3f6f9;
+      --line: #dce3e9;
+      --accent: #2d83b9;
+      --max: 1040px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--background);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.68;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      color: #fff;
+      background: linear-gradient(130deg, #062746 0%, #0b416e 62%, #17618d 100%);
+      padding: 64px 22px 48px;
+    }
+    .hero-inner, main, footer .inner { max-width: var(--max); margin: 0 auto; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #b9d9ef;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 6vw, 3.7rem);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+    .role {
+      margin: 15px 0 7px;
+      font-size: clamp(1.08rem, 2.5vw, 1.35rem);
+      font-weight: 600;
+      color: #fff;
+    }
+    .affiliation { margin: 0; color: #d8e9f5; font-size: 1rem; }
+    .intro {
+      max-width: 790px;
+      margin: 25px 0 0;
+      color: #edf5fa;
+      font-size: 1.04rem;
+    }
+    .contact-row, .social-row {
+      display: flex; flex-wrap: wrap; gap: 11px; align-items: center;
+    }
+    .contact-row { margin-top: 26px; }
+    .contact-link, .social-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: #fff; border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.09); border-radius: 999px;
+      padding: 8px 14px; font-size: .92rem;
+    }
+    .contact-link:hover, .social-link:hover {
+      background: rgba(255,255,255,.18); text-decoration: none;
+    }
+    nav {
+      background: #fff; border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 5;
+    }
+    nav .inner {
+      max-width: var(--max); margin: 0 auto; padding: 0 20px;
+      display: flex; flex-wrap: wrap; gap: 4px 22px;
+    }
+    nav a {
+      display: inline-block; padding: 13px 0; color: #42576a;
+      font-size: .9rem; font-weight: 600;
+    }
+    main { padding: 20px 20px 56px; }
+    section {
+      background: var(--paper); border: 1px solid #e7edf2;
+      border-radius: 14px; padding: 30px 34px; margin: 24px 0;
+      box-shadow: 0 5px 20px rgba(24, 50, 74, .045);
+      scroll-margin-top: 72px;
+    }
+    h2 {
+      color: var(--navy); font-size: 1.45rem; line-height: 1.3;
+      margin: 0 0 20px; padding-bottom: 12px;
+      border-bottom: 2px solid var(--sky);
+    }
+    h3 { color: #173f60; margin: 22px 0 8px; font-size: 1.08rem; }
+    p { margin: 8px 0 13px; }
+    .muted { color: var(--muted); }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 14px 0 18px; }
+    .tag {
+      background: #edf5fa; color: #164e75; border: 1px solid #d8e8f2;
+      border-radius: 999px; padding: 5px 12px; font-size: .88rem;
+    }
+    .position, .project, .publication, .activity {
+      padding: 16px 0; border-bottom: 1px solid var(--line);
+    }
+    .position:last-child, .project:last-child, .publication:last-child,
+    .activity:last-child { border-bottom: 0; }
+    .entry-head {
+      display: flex; justify-content: space-between; gap: 16px;
+      align-items: baseline; flex-wrap: wrap;
+    }
+    .entry-head h3 { margin: 0; }
+    .date { color: var(--muted); font-size: .9rem; white-space: nowrap; }
+    .institution { color: var(--muted); margin-top: 3px; }
+    .project p { margin-bottom: 5px; }
+    .pub-list { padding-left: 22px; margin: 0; }
+    .pub-list li { padding: 0 0 14px 5px; }
+    .pub-list li:last-child { padding-bottom: 0; }
+    .pub-list em { color: #334c61; }
+    .note {
+      border-left: 3px solid var(--accent); background: #f2f7fb;
+      padding: 13px 17px; margin-top: 16px; color: #3b5368;
+      border-radius: 0 8px 8px 0;
+    }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .skill-title { color: var(--navy); font-weight: 700; margin-bottom: 4px; }
+    footer {
+      background: #062746; color: #d7e5ef; text-align: center;
+      padding: 32px 20px;
+    }
+    footer p { margin: 5px 0; }
+    footer a { color: #fff; }
+
+    .scholar-placeholder { opacity: .8; }
+    @media (max-width: 700px) {
+  
+    @media (max-width: 700px) {
+      header { padding: 48px 20px 38px; }
+      section { padding: 23px 20px; margin: 16px 0; }
+      nav .inner { gap: 0 15px; }
+      nav a { font-size: .83rem; }
+      .two-col { grid-template-columns: 1fr; gap: 10px; }
+      .entry-head { display: block; }
+      .date { display: block; margin-top: 3px; }
+    }
+  </style>
 </head>
 <body>
-
 <header>
-    <div class="header-content">
-        <h1>Yiran Zhao</h1>
-        <div class="subtitle">
-            Ph.D. in Genetics | Human Phenomics
-        </div>
-        <div class="subtitle">
-            Seeking Postdoctoral Position in Multi-omics, Systems Biology, or Exposome Research
-        </div>
-        
-        <!-- 页眉联系信息 -->
-        <div class="header-contacts">
-            <a href="mailto:zhaoyr2023@outlook.com" class="contact-item">
-                <span class="contact-icon">✉️</span>
-                <span>zhaoyr2023@outlook.com</span>
-            </a>
-            
-            <a href="https://www.researchgate.net/profile/Yiran-Zhao-23" class="contact-item" target="_blank">
-                <span class="contact-icon"><i class="fas fa-graduation-cap"></i></span>
-                <span>Research Gate</span>
-            </a>
-            
-            <div class="contact-item">
-                <span class="contact-icon">📍</span>
-                <span>Fudan University, Shanghai, China</span>
-            </div>
-        </div>
-        
-        <!-- 社交媒体图标链接 -->
-        <div class="social-links">
-            <a href="https://github.com/zzzyyr123" class="social-link" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://orcid.org/0000-0001-6543-561X" class="social-link" target="_blank" title="ORCID">
-                <i class="fab fa-orcid"></i>
-            </a>
-            <a href="https://x.com/yiranzhao2021?s=21" class="social-link" target="_blank" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
+  <div class="hero-inner">
+    <p class="eyebrow">Academic Profile</p>
+    <h1>Yiran Zhao, Ph.D.</h1>
+    <p class="role">Postdoctoral Researcher</p>
+    <p class="affiliation">Department of Environmental Health and Engineering<br>
+      Johns Hopkins Bloomberg School of Public Health · Johns Hopkins University</p>
+    <p class="intro">
+      Open to research opportunities, academic positions, and collaborations.
+      I work at the intersection of environmental health, human phenomics, and
+      multi-omics data science. My research connects population-level exposure
+      patterns and real-world health data with molecular profiles to investigate
+      biological responses and pathways relevant to human health.
+    </p>
+    <div class="contact-row">
+      <a class="contact-link" href="mailto:zhaoyr2023@outlook.com">✉ <span>zhaoyr2023@outlook.com</span></a>
+      <span class="contact-link">⌖ <span>Baltimore, Maryland, USA</span></span>
     </div>
+    <div class="social-row" style="margin-top:13px">
+      <a class="social-link" href="https://orcid.org/0000-0001-6543-561X" target="_blank" rel="noopener">ORCID</a>
+      <a class="social-link" href="https://www.researchgate.net/profile/Yiran-Zhao-23" target="_blank" rel="noopener">ResearchGate</a>
+      <a class="social-link" href="https://github.com/zzzyyr123" target="_blank" rel="noopener">GitHub</a>
+      <a class="social-link" href="https://x.com/yiranzhao2021?s=21" target="_blank" rel="noopener">X</a>
+    </div>
+  </div>
 </header>
 
-<section>
-    <h2>Education</h2>
-    <ul>
-        <li><strong>Ph.D. in Genetics</strong> (Joint Training), Fudan University & Shanghai Institute of Nutrition and Health, CAS (2021.9–2026.6)</li>
-        <li><strong>B.S. in Biotechnology</strong>, East China University of Science and Technology (2017.9–2021.6)</li>
-    </ul>
-</section>
+<nav aria-label="Main navigation">
+  <div class="inner">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#current-research">JHU Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
+    <a href="#skills">Skills</a>
+    <a href="#awards">Awards</a>
+    <a href="#activities">Service</a>
+  </div>
+</nav>
 
-<section>
+<main>
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am a Postdoctoral Researcher in the Department of Environmental Health and
+      Engineering at the Johns Hopkins Bloomberg School of Public Health, Johns
+      Hopkins University. I received my Ph.D. in Genetics from Fudan University,
+      with joint doctoral research training at the Shanghai Institute of Nutrition
+      and Health, Chinese Academy of Sciences.
+    </p>
+    <p>
+      My research interests span environmental and lifestyle exposomics, human
+      phenomics, and systems-level multi-omics analysis. I am interested in combining
+      population-based studies and real-world health information with molecular
+      measurements to characterize exposure-related biological variation and
+      investigate pathways associated with health and disease.
+    </p>
+  </section>
+
+  <section id="research">
     <h2>Research Interests</h2>
-    <p class="highlight">Exposome | Multi-omics Integration | Systems Biology | Systems Immunology | Chronic Diseases</p>
-    
-    <!-- 插入示意图部分 -->
-    <div class="figure-container">
-        <div class="figure-title">Research Framework: From Exposure to Chronic Disease</div>
-        
-        <!-- 方案A：如果您有图片文件，使用这个 -->
-        <img src="微信图片_20260128215427_552_150.png" alt="Research Framework Diagram" class="research-figure">
-        
-       
-<section>
-    <h2>Research Experience</h2>
-    <h3>Ph.D. Research Projects</h3>
-    <strong>Lead Projects:</strong>
-    <ul>
-        <li><strong>Sleep & Diet on Immunity & Chronic Health</strong> – Multi-omics exposure-immune association study (Accepted)</li>
-        <strong>Description:</strong><em> Exposures that disrupt the immune system can impact human health. This study aimed to understand immune
-variability influenced by exposures from a systems biology and multi-omics perspective. We recruited 1,001 healthy participants
-and collected 183 exposure, 1,332 immunophenotypes, whole blood transcriptome and plasma metabolome. Through
-exposure-immune wide association analysis, we identified 81 significant signals, with sleep and diet emerging as dominant
-exposures affecting the immunome (immune cells and function). Notably, compared with short-term late sleep onset, long-term late sleep onset triggered chronic inflammation with inducing metabolic changes. Besides, diet-related exposures
-mainly influence immune cell functions. We further quantified the mediation effects of exposures, omics and immunophenotypes, and further demonstrated that these effects reflect human immune health or chronic diseases. Our study offers comprehensive
-views of immunome variation affected by exposures and omics, and hold promise for guidance for future health assessment and
-management.</em>
-        <!-- 方案A：如果您有图片文件，使用这个 -->
-        <img src="FigS1.png" alt="Research Framework Diagram" class="research-figure2">
-        <div class="figure-caption">
-                <strong>Figure:</strong> Graphical abstract
-        </div>
-    
-
-        <li><strong>Gut Microbiota & Metabolites in Insulin Resistance</strong> – Mediation analysis of dietary inflammatory score (In Preparation)</li>
-        <strong>Description:</strong><em> It is known that Dietary Inflammatory Score (DIS) have an impact on insulin resistance. However, how DIS
-affect insulin resistance through plasma metabolites and gut microbiota remains unknown. This study analyzed the relationship
-among DIS, insulin resistance and plasma metabolites or gut microbiota; and verified that altering gut microbiota can replace some
-of the health effects brought about by dietary pattern changes.</em>
-        <!-- 方案A：如果您有图片文件，使用这个 -->
-        <img src="viewfile.png" alt="Research Framework Diagram" class="research-figure2">
-                <div class="figure-caption">
-                <strong>Figure:</strong> Graphical abstract
-        </div>
-    </ul>
-
-    <strong>Cooperate Projects:</strong>
-    <ul>
-        <li><strong>Immunophenotypic Profiling of BMI/WHR</strong> – Health heterogeneity & lifestyle influences</li>
-        <li><strong>Frailty Stratification via Immune Features</strong> – Subtyping & immune frailty index</li>
-        <li><strong>Seasonal Protein Patterns & Disease</strong> – UK Biobank analysis</li>
-    </ul>
-    <h3>Undergraduate Project</h3>
-    <ul>
-        <li>Stemness monitoring of mesenchymal stem cells via qRT-PCR & morphological analysis</li>
-        <strong>Description:</strong><em> Human umbilical cord-derived mesenchymal stem cells (hUCMSCs) are promising therapeutic agents, but their
-industrial-scale manufacturing requires scalable quality control methods. To overcome the inefficiency of traditional stemness
-assays, this project developed and validated a rapid qRT-PCR method for monitoring stemness-related genes across passages. This
-approach was complemented by quantitative morphological and metabolic analyses, establishing an efficient framework for future
-large-scale production.</em>
-    </ul>
-</section>
-
-<section>
-    <h2>Research Skills</h2>
-    <ul>
-        <li><strong>Bioinformatics:</strong> R, Python, Shell, Linux, HPC, Multi-omics, Single-cell, GWAS, Machine Learning</li>
-        <li><strong>Wet Lab:</strong> Flow cytometry, PCR/qPCR, Stem cell culture, Sequencing library prep, Protein expression&purification</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Publications</h2>
-    <h3>First Author</h3>
-    <ul>
-        <li>Zhao, Yiran* et al. “The Influence of Sleep and Diet on Human Peripheral Immunity and Chronic Health Conditions.” Research (2025): n. pag.</li>
-        <li>Zhao Y* et al. "The gut microbiome and plasma metabolites modulates the association between a inflammatory diet and insulin resistance" (In Prep)</li>
-        <li>Zhou S, Zhao Y* et al. "Immunophenotypic profiling of obesity characterizes health heterogeneity and lifestyle influences" (In Prep)</li>
-    </ul>
-    <h3>Co-authored</h3>
-    <ul>
-        <li>Li W, Li K, Zhou P, Cheng Y, Zhao Y*, Meng X, Niu Y, Zong G, Kan H, Wang S. Proteomic mediation of air pollution and diseases: A comprehensive analysis in the UK Biobank cohort. <em>Nature Communications</em> (2025)</li>
-        <li>Gao J, Luo Y, Li H, Zhao Y*, Zhao J, Han X, Han J, Lin H, Qian F. Deep Immunophenotyping of Human Whole Blood by Standardized Multi-parametric Flow Cytometry Analyses. <em>Phenomics.</em> 2023 Feb 23;3(3):309-328. doi: 10.1007/s43657-022-00092-9.</li>
-        <li>Han J, Gao J, Ma Y, Li Y, Wu C, Le S, Zhao Y*, Li H, Luo Y, Han X, Guo Y, Li Y, Zhou G, Jin L, Wang J, Qian F. Distinct immune cell profiles associated with high-altitude hypoxia and severe acute mountain sickness. <em>The Journal of Physiology.</em> 2025 Aug 6. doi: 10.1113/JP288584.</li>
-        <li>Zhao J, Han X, Li H, Luo Y, Fang Y, Wang Y, Gao J, Zhao Y*, Han J, Qian F. Analysis of the Immune Response by Standardized Whole-Blood Stimulation with Metabolism Modulation. <em>Phenomics.</em> 2023 Sep 12;4(1):81-89. doi: 10.1007/s43657-023-00114-0.</li>
-        <li>Luo Y, Gao J, Su X, Li H, Li Y, Qi W, Han X, Han J, Zhao Y*, Zhang A, Zheng Y, Qian F, He H. Unraveling the immunological landscape and gut microbiome in sepsis: a comprehensive approach to diagnosis and prognosis. <em>EBioMedicine.</em> 2025 Mar;113:105586. doi: 10.1016/j.ebiom.2025.105586.</li>
-        <li> Li Z, Ning X, Zhao Y*, Zhang X, Xiao C, Li Z. Efficient One-Pot Synthesis of Cytidine 5'-Monophosphate Using an Extremophilic Enzyme Cascade System. <em>J Agric Food Chem.</em> 2020 Aug 26;68(34):9188-9194. doi: 10.1021/acs.jafc.0c04055.</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Patent</h2>
-    <p><strong>CN2025104699649</strong> – "Method and device for Constructing a machine Learning model for lifestyle-related Immune Scoring" (Feng Qian, Sijia Wang, Yiran Zhao*, Wenran Li, Bingjie Li, Jian Gao)</p>
-</section>
-
-<section>
-    <h2>Conferences & Awards</h2>
-    <ul>
-        <li>Oral Presentation - The Announcement of The 4th National Conference on Systems Biology (2025)</li>
-        <li>Outstanding Academic Presentation – "Human Biology" academic exchange activities (2025)</li>
-        <li>Outstanding Poster – Life Science Forum of Fudan University Doctoral Academic Forum (2024)</li>
-        <li>Outstanding Student – Fudan University (2022)</li>
-        <li>Outstanding Graduate & Thesis – ECUST (2021)</li>
-        <li>iGEM (International Genetically Engineered Machine Competition) Silver Award (2021)</li>
-        <li>Mathematics Competition Third Prize – ECUST (2018)</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Professional Activities</h2>
-    <ul>
-        <li><strong>Publishing Editor (Part-time) – <em>Phenomics</em> Journal:</strong></li>
-        <p>Assisting the editorial office in manuscript processing (invite reviewers, format proofreading)</p>
-        <p>Operating the publicity platforms and making the publicity products of Phenomics</p>
-        <p>Assisting in the organization of journal meetings, domestic and international conference affairs and expert reception</p>
-        <li><strong>Participate in the construction of the cohort:</strong></li>
-        <p>Cohort Data Collection & Immunome Data Processing</p>
-        <p>Flow Cytometry Gating & QC Pipeline Design</p>
-    </ul>
-</section>
-
- <!-- 方案B：如果您暂时没有图片，显示占位符和文字框架 -->
-        <div style="background: #e6f7ff; padding: 2rem 1rem; text-align: center; border-radius: 6px; margin: 1rem 0;">
-            <div style="font-size: 2rem; color: #0066cc; margin-bottom: 1rem;">🔬</div>
-            <h3 style="color: #555; max-width: 600px; margin: 0.5rem auto;">
-                Future research plan
-            </h3>
-            <h3 style="color: #003366;"><em>Dissecting the complex relationships of "exposure-omics-disease" </em></h3>
-            
-        </div>
-        
-        <!-- 6个panel的研究框架 -->
-        <div class="research-timeline">
-            <!-- Panel 1: Cohort Design -->
-            <div class="timeline-step">
-                <div class="step-number">1</div>
-                <h3>Responder & Non-responder of Exposures</h3>
-                <ul>
-                    <p><em>Who is more likely to be affected by the exposure or to benefit from the changes resulting from the exposure?</em></p>
-                    <li>Distinguished by multiple omics markers (networks) or genotypes</li>
-                </ul>
-            </div>
-            
-            <!-- Panel 2: Exposure Assessment -->
-            <div class="timeline-step">
-                <div class="step-number">2</div>
-                <h3>Exposure & Genetics Interaction</h3>
-                <ul>
-                    <p><em>Genetic susceptibility</em></p>
-                    <li>Sleep: Chronotype, Sleep Quality; Cognitive</li>
-                    <li>Diet: Dietary intake, Dietary habits</li>
-                </ul>
-            </div>
-            
-            <!-- Panel 3: Multi-omics Profiling -->
-            <div class="timeline-step">
-                <div class="step-number">3</div>
-                <h3>Intervention & Translation</h3>
-                <ul>
-                    <p><em>Discovery of multi-omics substitutes for exposure intervention</em></p>
-                    <li>Intervation cohort</li>
-                    <li>Clinical translation</li>
-                </ul>
-            </div>
-            
-            <!-- Panel 4: Data Integration -->
-            <!--<div class="timeline-step">
-                <div class="step-number">4</div>
-                <h3>Systems Integration</h3>
-                <ul>
-                    <li>Exposure-immune association</li>
-                    <li>Mediation pathway analysis</li>
-                    <li>Network construction</li>
-                    <li>Multi-omics correlation</li>
-                </ul>
-            </div>-->
-            
-            <!-- Panel 5: Computational Analysis -->
-            <!--<div class="timeline-step">
-                <div class="step-number">5</div>
-                <h3>Computational Analysis</h3>
-                <ul>
-                    <li>Machine learning modeling</li>
-                    <li>Biomarker identification</li>
-                    <li>Risk prediction models</li>
-                    <li>Interaction network analysis</li>
-                </ul>
-            </div>-->
-            
-            <!-- Panel 6: Clinical Translation -->
-        <!--    <div class="timeline-step">
-                <div class="step-number">6</div>
-                <h3>Clinical Translation</h3>
-                <ul>
-                    <li>Biomarker validation</li>
-                    <li>Intervention strategies</li>
-                    <li>Health risk assessment</li>
-                    <li>Personalized recommendations</li>
-                </ul>
-            </div>-->
-        </div> 
-        
+    <div class="tag-list">
+      <span class="tag">Exposomics</span>
+      <span class="tag">Multi-omics Integration</span>
+      <span class="tag">Human Phenomics</span>
+      <span class="tag">Statistical Data Analysis</span>
+      <span class="tag">Systems Immunology</span>
+      <span class="tag">Chronic Disease Research</span>
     </div>
-</section>
+    <div class="note">
+      <strong>Research perspective.</strong> From population-level exposure patterns
+      to molecular signatures and health outcomes: integrating complementary layers
+      of biological information to better understand the links between environment,
+      lifestyle, and human health.
+    </div>
+  </section>
+
+  <section id="current-research">
+    <h2>Research at Johns Hopkins</h2>
+    <p>
+      At Johns Hopkins, my research interests center on integrating population-level
+      health information with molecular data to better understand how environmental
+      and lifestyle exposures are related to human health. I am interested in working
+      with exposomics resources such as HHEAR and exploring the integration of
+      multi-omics profiles with health information, including electronic health
+      record-derived phenotypes.
+    </p>
+    <p>
+      A key part of this work is developing robust and reproducible analytical
+      approaches for harmonizing heterogeneous datasets, integrating complementary
+      molecular layers, and identifying interpretable patterns that can inform
+      environmental and population health research.
+    </p>
+    <div class="tag-list">
+      <span class="tag">HHEAR & Exposomics</span>
+      <span class="tag">EHR-linked Health Data</span>
+      <span class="tag">Multi-omics Integration</span>
+      <span class="tag">Data Harmonization</span>
+      <span class="tag">Reproducible Analysis</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Research & Academic Experience</h2>
+    <div class="position">
+      <div class="entry-head">
+        <h3>Postdoctoral Researcher</h3>
+        <span class="date">Nov. 2026 – Present</span>
+      </div>
+      <div class="institution">Department of Environmental Health and Engineering, Johns Hopkins Bloomberg School of Public Health, Johns Hopkins University · Baltimore, USA</div>
+      <p class="muted">Research interests include exposomics, multi-omics integration, and population-based environmental health research.</p>
+    </div>
+    <div class="position">
+      <div class="entry-head">
+        <h3>Ph.D. Researcher in Genetics</h3>
+        <span class="date">Sep. 2021 – Jun. 2026</span>
+      </div>
+      <div class="institution">Fudan University, Human Phenome Institute · Shanghai, China</div>
+      <p class="muted">Joint Ph.D. research training at the Shanghai Institute of Nutrition and Health, Chinese Academy of Sciences (Jan. 2022 – Jun. 2026).</p>
+    </div>
+
+    <h3>Selected Research Projects</h3>
+    <div class="project">
+      <div class="entry-head">
+        <h3>Lifestyle Exposures, Peripheral Immunity, and Chronic Health</h3>
+        <span class="date">Ph.D. research</span>
+      </div>
+      <p>
+        Integrated 183 exposures, 1,332 immunophenotypes, whole-blood transcriptomics,
+        and plasma metabolomics from 1,001 participants to investigate exposure-related
+        immune variation. The study identified 81 significant signals, with sleep and
+        diet emerging as prominent exposure domains associated with immune cells and
+        function. Further analyses examined links among exposures, immune phenotypes,
+        transcriptomic and metabolomic intermediates, and health outcomes. Exposome-omics
+        indices were developed and evaluated in eight external cohorts.
+      </p>
+    </div>
+    <div class="project">
+      <div class="entry-head">
+        <h3>Dietary Inflammation, Gut Microbiota, Metabolites, and Insulin Resistance</h3>
+        <span class="date">Ph.D. research</span>
+      </div>
+      <p>
+        Integrated gut metagenomic and plasma metabolomic data from 682 participants
+        to investigate potential microbial and metabolic links between the Dietary
+        Inflammatory Score and insulin resistance. The analyses identified five
+        microbial species associated with both dietary inflammation and insulin
+        resistance, including mediation signals involving <em>Eubacterium eligens</em>
+        and <em>Streptococcus salivarius</em>. Metabolomic and pathway analyses
+        highlighted triglycerides, branched-chain amino acids, HDL, and pectin
+        degradation-related processes.
+      </p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <p class="muted">Selected peer-reviewed publications. DOI links open the corresponding publisher or article record. Author name <strong>Zhao Y</strong> is highlighted throughout.</p>
+    <ol class="pub-list">
+      <li><strong>Zhao Y*</strong>, Li W*, Li B*, et al. The Influence of Sleep and Diet on Human Peripheral Immunity and Chronic Health Conditions. <em>Research</em>. 2026;9:1081. <a href="https://doi.org/10.34133/research.1081" target="_blank" rel="noopener">doi:10.34133/research.1081</a>.</li>
+      <li>Li W, Li K, Zhou P, Cheng Y, <strong>Zhao Y</strong>, et al. Plasma proteome mediates the associations between air pollution exposure and disease risk. <em>Nature Communications</em>. 2026;17(1):2206. <a href="https://doi.org/10.1038/s41467-026-68972-6" target="_blank" rel="noopener">doi:10.1038/s41467-026-68972-6</a>.</li>
+      <li>Han J, Gao J, Ma Y, Li Y, Wu C, Le S, <strong>Zhao Y</strong>, et al. Distinct immune cell profiles associated with high-altitude hypoxia and severe acute mountain sickness. <em>The Journal of Physiology</em>. 2025. <a href="https://doi.org/10.1113/JP288584" target="_blank" rel="noopener">doi:10.1113/JP288584</a>.</li>
+      <li>Luo Y, Gao J, Su X, Li H, Li Y, Qi W, Han X, Han J, <strong>Zhao Y</strong>, Zhang A, Zheng Y, Qian F, He H. Unraveling the immunological landscape and gut microbiome in sepsis: a comprehensive approach to diagnosis and prognosis. <em>EBioMedicine</em>. 2025;113:105586. <a href="https://doi.org/10.1016/j.ebiom.2025.105586" target="_blank" rel="noopener">doi:10.1016/j.ebiom.2025.105586</a>.</li>
+      <li>Li Y, Li B, Li H, Xu J, Luo Y, Gao J, Han J, Han X, <strong>Zhao Y</strong>, et al. Peripheral immune dysfunction in ESCC with lymph node metastasis: implications for preoperative diagnosis and prognosis. <em>Phenomics</em>. 2026. <a href="https://doi.org/10.1007/s43657-025-00291-0" target="_blank" rel="noopener">doi:10.1007/s43657-025-00291-0</a>.</li>
+      <li>Zhao J, Han X, Li H, Luo Y, Fang Y, Wang Y, Gao J, <strong>Zhao Y</strong>, Han J, Qian F. Analysis of the Immune Response by Standardized Whole-Blood Stimulation with Metabolism Modulation. <em>Phenomics</em>. 2023;4(1):81–89. <a href="https://doi.org/10.1007/s43657-023-00114-0" target="_blank" rel="noopener">doi:10.1007/s43657-023-00114-0</a>.</li>
+      <li>Gao J, Luo Y, Li H, <strong>Zhao Y</strong>, Zhao J, Han X, Han J, Lin H, Qian F. Deep Immunophenotyping of Human Whole Blood by Standardized Multi-parametric Flow Cytometry Analyses. <em>Phenomics</em>. 2023;3(3):309–328. <a href="https://doi.org/10.1007/s43657-022-00092-9" target="_blank" rel="noopener">doi:10.1007/s43657-022-00092-9</a>.</li>
+      <li>Li Z, Ning X, <strong>Zhao Y</strong>, Zhang X, Xiao C, Li Z. Efficient One-Pot Synthesis of Cytidine 5'-Monophosphate Using an Extremophilic Enzyme Cascade System. <em>Journal of Agricultural and Food Chemistry</em>. 2020;68(34):9188–9194. <a href="https://doi.org/10.1021/acs.jafc.0c04055" target="_blank" rel="noopener">doi:10.1021/acs.jafc.0c04055</a>.</li>
+      <li>Li Y, Wang B, Han X, Dang J, Qiu J, Liu B, Wang W, Zhou F, <strong>Zhao Y</strong>, et al. Immunophenotypic Profiles of General Chinese Population during Natural Aging. <em>Analytical Chemistry</em>. 2026;98(44):30406–30418. <a href="https://doi.org/10.1021/acs.analchem.6c03408" target="_blank" rel="noopener">doi:10.1021/acs.analchem.6c03408</a>.</li>
+      <li>Zhang A, Han X, Zhao X, Gao J, Zhou X, <strong>Zhao Y</strong>, et al. Deep immunophenotyping reveals additive associations of obesity and lifestyle with immune age acceleration. <em>Med</em>. 2026.</li>
+    </ol>
+    <p class="muted">* Co-first authorship as indicated in the publication.</p>
+  </section>
+
+  <section id="patent">
+    <h2>Patent</h2>
+    <p>
+      Feng Qian, Sijia Wang, Yiran Zhao, Wenran Li, Bingjie Li, Jian Gao.
+      “Method and Device for Constructing a Machine Learning Model for
+      Lifestyle-related Immune Scoring.” China Patent, CN202510469964.9.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Research Skills</h2>
+    <div class="two-col">
+      <div>
+        <p class="skill-title">Computational & Data Analysis</p>
+        <p>R, Python, statistical data analysis, multi-omics data analysis</p>
+      </div>
+      <div>
+        <p class="skill-title">Laboratory</p>
+        <p>Flow cytometry and cell sorting, cell culture, PCR/qPCR, sequencing library preparation (transcriptome, immune repertoire, and single-cell)</p>
+      </div>
+      <div>
+        <p class="skill-title">Languages</p>
+        <p>Chinese (native), English (fluent; written and spoken), German (TestDaF 12)</p>
+      </div>
+      <div>
+        <p class="skill-title">Professional Skills</p>
+        <p>Independent project management, cross-functional team coordination, science communication, and mentoring of junior researchers</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <h2>Honors & Awards</h2>
+    <ul>
+      <li>Outstanding Academic Presentation, “The exposure-related immune metrics reflect human health status,” Human Biology academic exchange activities, Fudan University, 2025.</li>
+      <li>Outstanding Poster, “Alterations in the immunome and its interactions with transcriptional and metabolic molecules induced by exposures,” Fudan University Doctoral Academic Forum, 2024.</li>
+      <li>Outstanding Student, Fudan University, 2022.</li>
+    </ul>
+  </section>
+
+  <section id="activities">
+    <h2>Academic & Professional Activities</h2>
+    <div class="activity">
+      <div class="entry-head">
+        <h3>Young Editorial Board Member, <em>Phenomics</em></h3>
+        <span class="date">Oct. 2026 – Present</span>
+      </div>
+      <p class="muted">Editorial Office of <em>Phenomics</em>.</p>
+    </div>
+    <div class="activity">
+      <div class="entry-head">
+        <h3>Publishing Editor (Part-time), <em>Phenomics</em></h3>
+        <span class="date">Dec. 2021 – Oct. 2024</span>
+      </div>
+      <p>Supported manuscript processing, reviewer invitations, proofreading, journal communications and publicity, and the organization of journal meetings and academic events.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Connect</h2>
+    <p>
+      I am open to exploring research and career opportunities, academic positions, and collaborations. I welcome conversations with researchers, teams, and institutions working in exposomics, human phenomics, multi-omics analysis, and environmental health.
+    </p>
+    <p><a href="mailto:zhaoyr2023@outlook.com">zhaoyr2023@outlook.com</a></p>
+  </section>
+</main>
 
 <footer>
-    <div class="footer-content">
-        <!-- 欢迎交流字样 -->
-        <div class="welcome-message">
-            <span class="highlight-text">Welcome to Connect!</span> Open to Research Collaboration & Seeking Postdoctoral Position
-        </div>
-        
-       
-        <!-- 页脚联系信息 -->
-        <div class="footer-contacts">
-            <a href="mailto:zhaoyr2023@outlook.com" class="contact-item">
-                <span class="contact-icon">✉️</span>
-                <span>zhaoyr2023@outlook.com</span>
-            </a>
-            
-            <a href="https://www.researchgate.net/profile/Yiran-Zhao-23" class="contact-item" target="_blank">
-                <span class="contact-icon"><i class="fas fa-graduation-cap"></i></span>
-                <span>Research Gate</span>
-            </a>
-        </div>
-        
-        <!-- 社交媒体图标 -->
-        <div class="footer-social-links">
-            <a href="https://github.com/zzzyyr123" class="social-link" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://orcid.org/0000-0001-6543-561X" class="social-link" target="_blank" title="ORCID">
-                <i class="fab fa-orcid"></i>
-            </a>
-            <a href="https://x.com/yiranzhao2021?s=21" class="social-link" target="_blank" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
-        
-        <!-- 版权信息 -->
-        <div class="copyright">
-            <p>© 2025 Yiran Zhao | Designed for Postdoctoral Applications</p>
-            <p class="update-info">Last updated: January 2025 | Fudan University, Shanghai, China</p>
-        </div>
-    </div>
+  <div class="inner">
+    <p><strong>Yiran Zhao, Ph.D.</strong></p>
+    <p>Postdoctoral Researcher · Johns Hopkins University</p>
+    <p>© 2026 Yiran Zhao</p>
+  </div>
 </footer>
-
 </body>
 </html>
